@@ -1,0 +1,23 @@
+read_libs /home/student/scl_pdk/SCLPDK_V3.0_KIT/scl180/stdcell/fs120/4M1IL/liberty/lib_flow_ss/tsl18fs120_scl_ss.lib
+read_hdl top_module.v up_counter.v down_counter.v
+elaborate
+read_sdc counter.sdc
+
+# to maintain hierarchy in design
+set_db syn_generic_effort medium
+set_db syn_map_effort medium
+set_db syn_opt_effort medium
+
+# to make and optimize design with technology library file
+syn_generic
+syn_map
+syn_opt
+
+# reports need to understand design performance
+report_gates
+report_power
+report_timing
+
+# output files to use in PnR
+write_hdl > counter_netlist.v
+write_sdc > counter_netlist.sdc
