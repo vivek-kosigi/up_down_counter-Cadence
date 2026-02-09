@@ -1,0 +1,5 @@
+    Hinst Name       Module Name          Inst Count           Total Area
+----------------------------------------------------------------------
+up_down_top                                       23              890.624
+ u1                  up_counter                   11              429.632
+ u2                  down_counter                 12              460.992
